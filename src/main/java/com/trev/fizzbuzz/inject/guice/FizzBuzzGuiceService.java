@@ -9,6 +9,13 @@ public class FizzBuzzGuiceService
     private final FizzBuzzTextProvider textProvider;
     private final FizzBuzzPrinter printer;
 
+    /**
+     * A constructor that needs module configuration.
+     *
+     * @param numberProvider creates a Stream of Integer
+     * @param textProvider translates integers to text
+     * @param printer prints the texts
+     */
     @Inject
     public FizzBuzzGuiceService(final FizzBuzzNumberProvider numberProvider,
         final FizzBuzzTextProvider textProvider,
@@ -18,6 +25,20 @@ public class FizzBuzzGuiceService
         this.textProvider = textProvider;
         this.printer = printer;
     }
+
+    /**
+     * This one doesn't need module configuration
+     */
+
+    //    @Inject
+    //    public FizzBuzzGuiceService(final DefaultNumberProvider numberProvider,
+    //        final DefaultTextProvider textProvider,
+    //        final DefaultFizzBuzzPrinter printer)
+    //    {
+    //        this.numberProvider = numberProvider;
+    //        this.textProvider = textProvider;
+    //        this.printer = printer;
+    //    }
 
     public void doFizzBuzz()
     {
