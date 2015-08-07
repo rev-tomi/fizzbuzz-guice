@@ -1,11 +1,8 @@
 package com.trev.fizzbuzz.inject.guice;
 
-public class FizzBuzzPrinter
+public interface FizzBuzzPrinter
 {
 
-    public void printFizzBuzz(final String msg)
-    {
-        System.out.println(msg);
-    }
+    void printFizzBuzz(String msg);
 
 }
